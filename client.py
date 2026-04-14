@@ -7,3 +7,8 @@ def get_predefined_key():
         desi=des(key,ECB, pad=None, padmode=PAD_PKCS5)
         encrypted_message=desi.encrypt(message)
         return encrypted_message
+
+    def decrypt_message(ciphertext,key):
+        desi=des(key,ECB,pad=None,padmode=PAD_PKCS5)
+        decrypted_message=desi.decrypt(ciphertext)
+        return decrypt_message    
