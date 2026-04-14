@@ -11,4 +11,14 @@ def get_predefined_key():
     def decrypt_message(ciphertext,key):
         desi=des(key,ECB,pad=None,padmode=PAD_PKCS5)
         decrypted_message=desi.decrypt(ciphertext)
-        return decrypt_message    
+        return decrypt_message  
+
+
+    def client_program():
+        host='127.0.0.1'
+        port=5001
+        key=get_predefined_key()
+
+        print("-----------------------")
+        message=input("Shkruaj nje mesazh per te derguar ne server: ")
+        print("-----------------------")  
