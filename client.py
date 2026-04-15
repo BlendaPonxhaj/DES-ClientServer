@@ -1,4 +1,6 @@
-import socket from pyDes import *
+import socket
+from pyDes import des, ECB, PAD_PKCS5
+
 
 def get_predefined_key():
     return b"\x31\x41\x61\x11\x21\x31\x41\x51"
