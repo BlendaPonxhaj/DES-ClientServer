@@ -22,3 +22,13 @@ def get_predefined_key():
         print("-----------------------")
         message=input("Shkruaj nje mesazh per te derguar ne server: ")
         print("-----------------------")  
+
+        with socket socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((host,port))
+
+            encrypted_message=encrypt_message(message,key)
+
+            print(f'Mesazhi eshte enkriptuar "(encrypted_message)" dhe eshte derguar ne server')
+            print("--------------------")
+
+            s.send(encrypted_message)
