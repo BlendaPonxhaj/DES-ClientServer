@@ -35,3 +35,19 @@ def client_program():
         print("--------------------")
 
         s.send(encrypted_message)
+
+    #pjesa e kodit qe krijon komunikimin e sigurt me DES encryption
+
+    prompt = s.recv(1024)
+    decrypted_prompt = decrypt_message(prompt,key)
+    print(decrypted_data.decode())
+
+    answer = input("")
+    encrypted_answer = encrypt_message(answer,key)
+    s.send(encrypted_answer)
+
+    decrypted_data = decrypt_message(s.recv(1024),key)
+    print(decrypted_data.decode())
+
+    if __name__=='__main__':
+    client_program()
