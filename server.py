@@ -14,4 +14,17 @@ def decrypt_message(ciphertext, key):
     decrypted_message = desi.decrypt(ciphertext)
     return decrypted_message
 
+def server_program():
+    host = '127.0.0.1'  # IP adresa lokale
+    port = 5001  
+
+    key = get_predefined_key()
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((host, port))
+    s.listen(5)
+   
+    print('Serveri është i gatshëm të pranojë lidhje...')
+    print("-----------------------------------------------")
+
 
