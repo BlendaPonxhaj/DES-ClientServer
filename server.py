@@ -27,4 +27,17 @@ def server_program():
     print('Serveri është i gatshëm të pranojë lidhje...')
     print("-----------------------------------------------")
 
+    while True:
+        conn, addr = s.accept()
+        print("--------------------------------------------------------")
+        print(f'U lidh klienti nga {addr}')
+        print("--------------------------------------------------------")
+
+        data = conn.recv(1024)
+       
+        decrypted_data = decrypt_message(data, key)
+        print("--------------------------------------------------------")
+        print(f'Mesazhi i dekriptuar nga klienti: {decrypted_data.decode()}')
+        print("--------------------------------------------------------")
+
 
