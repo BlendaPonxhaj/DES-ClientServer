@@ -32,23 +32,23 @@ def client_program():
         
         encrypted_message=encrypt_message(message,key)
 
-        print(f'Mesazhi eshte enkriptuar "(encrypted_message)"dhe eshte derguar ne server.')
+        print(f'Mesazhi eshte enkriptuar "{encrypted_message}"dhe eshte derguar ne server.')
         print("--------------------")
 
         s.send(encrypted_message)
 
-    #pjesa e kodit qe krijon komunikimin e sigurt me DES encryption
+        #pjesa e kodit qe krijon komunikimin e sigurt me DES encryption
 
-    prompt = s.recv(1024)
-    decrypted_prompt = decrypt_message(prompt,key)
-    print(decrypted_data.decode())
+        prompt = s.recv(1024)
+        decrypted_prompt = decrypt_message(prompt,key)
+        print(decrypted_prompt.decode())
 
-    answer = input("")
-    encrypted_answer = encrypt_message(answer,key)
-    s.send(encrypted_answer)
+        answer = input("")
+        encrypted_answer = encrypt_message(answer,key)
+        s.send(encrypted_answer)
 
-    decrypted_data = decrypt_message(s.recv(1024),key)
-    print(decrypted_data.decode())
+        decrypted_data = decrypt_message(s.recv(1024),key)
+        print(decrypted_data.decode())
 
-    if __name__=='__main__':
-    client_program()
+if __name__=='__main__':
+  client_program()
