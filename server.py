@@ -42,23 +42,23 @@ def server_program():
 
 #pjesa e kodit qe lejon dergon konfirmimin e mesazhit te klienti dhe qe mirret me procesimin e inputit po/jo (p/j) nga ana e tij 
 
-prompt = "Serveri e ka pranuar mesazhin, a deshironi te shihni permbajtjen? (p/j):"
+        prompt = "Serveri e ka pranuar mesazhin, a deshironi te shihni permbajtjen? (p/j):"
 
-encrypted_prompt = encrypt_message(prompt,key)
-conn.send(encrypted_prompt)
+        encrypted_prompt = encrypt_message(prompt,key)
+        conn.send(encrypted_prompt)
 
-answer = conn.recv(16)
-decrypted_answer = decrypt_message(answer,key)
-decrypted_answer = decrypted_answer.decode()
+        answer = conn.recv(16)
+        decrypted_answer = decrypt_message(answer,key)
+        decrypted_answer = decrypted_answer.decode()
 
-if decrypted_answer == 'p':
-conn.send(data)
-elif decrypted_answer == 'j':
-conn.send(encrypt_message("Ju nuk doni te shihni mesazhin e juaj", key))
+        if decrypted_answer == 'p':
+          conn.send(data)
+        elif decrypted_answer == 'j':
+          conn.send(encrypt_message("Ju nuk doni te shihni mesazhin e juaj", key))
 
-conn.close()
+        conn.close()
 
 
 if __name__ == '__main__':
-server_program()
+  server_program()
 
