@@ -1,4 +1,5 @@
-import socket from pyDes import * 
+import socket 
+from pyDes import * 
 
 
 def get_predefined_key():
