@@ -30,7 +30,7 @@ def client_program():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((host, port))
         
-        encrypted_message=encrypt_message(message,key)
+        encrypted_message = encrypt_message(message,key)
 
         print(f'Mesazhi eshte enkriptuar "{encrypted_message}"dhe eshte derguar ne server.')
         print("--------------------")
@@ -51,4 +51,4 @@ def client_program():
         print(decrypted_data.decode())
 
 if __name__=='__main__':
-  client_program()
+      client_program()
