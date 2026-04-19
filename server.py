@@ -40,7 +40,7 @@ def server_program():
         print(f'Mesazhi i dekriptuar nga klienti: {decrypted_data.decode()}')
         print("--------------------------------------------------------")
 
-#pjesa e kodit qe lejon dergon konfirmimin e mesazhit te klienti dhe qe mirret me procesimin e inputit po/jo (p/j) nga ana e tij 
+        # Dergon prompt te klienti dhe pranon pergjigjen p/j
 
         prompt = "Serveri e ka pranuar mesazhin, a deshironi te shihni permbajtjen? (p/j):"
 
