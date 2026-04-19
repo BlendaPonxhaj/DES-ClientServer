@@ -61,3 +61,7 @@ Qëllimi i këtij projekti është të tregojë në mënyrë praktike:
 - komunikimin klient/server përmes socket-eve,
 - transmetimin e sigurt të të dhënave në rrjet,
 - dhe zbatimin e kriptografisë simetrike në Python.
+
+## Informacion shtesë
+
+Ky projekt është realizuar në kuadër të lëndës Data Security dhe shërben për demonstrimin praktik të komunikimit të sigurt në rrjet duke përdorur algoritmin DES.  
